@@ -34,4 +34,4 @@ The amount of RAM needed (line-by-line) would be O(n\*s), where s is the size of
 
 ## Suggestion for Improvement
 
-Assuming that the dataset has more unique entries than matching ones, it would be more efficient to delete elements from the original input data than to build the output from an empty data structure. This would reduce the space cost of the program. 
+Assuming that the dataset has more unique entries than matching ones, it would be more efficient to delete elements from the original input data than to build the output from an empty data structure. This would reduce the space and runtime cost of the program.
