@@ -30,7 +30,7 @@ To address this and to make the program as RAM-efficient as possible, the datase
 
 The runtime of each mode was estimated with the time difference using the ```time``` module. The batch approach took on average (10 runs) **2.12** seconds while the line-by-line method took on average **1.62** seconds. (about **24%** improvement)
 
-The amount of RAM needed (line-by-line) would be O(n\*s), where s is the size of each object(ie. in bytes). The I/O cost would be O( (n\*u)/p ) objects, where u is the ratio of the dataset where is elements are unique (ie. 1-Pr(duplicate entries are in dataset) ), and p is the size of the page. 
+The amount of RAM needed (line-by-line) would be **O(n\*s)**, where s is the size of each object(ie. in bytes). The I/O cost would be **O( (n\*u)/p )** objects, where u is the ratio of the dataset where is elements are unique (ie. 1-Pr(duplicate entries are in dataset) ), and p is the size of the page. 
 
 ## Suggestion for Improvement
 
