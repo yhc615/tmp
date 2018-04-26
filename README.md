@@ -12,7 +12,7 @@ The output JSON file is written in ```.\merging_challenge\dat```, where the give
 
 ## Design Choices
 
-The main module ```app.py``` lies in the ```\src``` directory whiles modules for extracting and writing JSON data lies in the ```\src\data_utils```. 
+The main module ```app.py``` lies in the ```\src``` directory while modules for extracting and writing JSON data lies in the ```\src\data_utils```. 
 
 The challenge was done using standard python libraries ```json``` and ```sys```.
 
@@ -24,7 +24,7 @@ To minimize I/O costs, each object was compared in the order title, city and cou
 
 Initially, the dataset was loaded in batch (```'b'``` mode) into a variable within the program and that variable was iterated through merge the dataset. This requires a considerable RAM as the entirety of the dataset is loaded in-page before matching and merging. This approach can also scale inefficiently since the RAM demand will scale with the size of the input dataset. 
 
-To address this and make the program as RAM-efficient as possible, the dataset was loaded line-by-line (```'l'``` mode). The JSON Line format allows this as the file contains individual JSON objects separated by line breaks, allowing each object to be loaded and processed individually rather than in batch. To furthur minimize I/O costs, the "seen" dictionary is passed by reference each time and updated rather than copied. 
+To address this and to make the program as RAM-efficient as possible, the dataset was loaded line-by-line (```'l'``` mode). The JSON Line format allows this as the file contains individual JSON objects separated by line breaks, allowing each object to be loaded and processed individually rather than in batch. To furthur minimize I/O costs, the "seen" dictionary is passed by reference each time and updated rather than copied. 
 
 ## Runtime and Cost Estimates
 
